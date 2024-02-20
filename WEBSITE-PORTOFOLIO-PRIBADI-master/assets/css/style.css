@@ -66,22 +66,20 @@ body {
     color: var(--warna2);
 }
 
-
-  
-  button {
+button {
     border: 0;
     padding: 0;
     background: transparent;
     cursor: pointer;
-  }
-  
-  .navbar,
-  .navbar-burger,
-  .menu {
+}
+
+.navbar,
+.navbar-burger,
+.menu {
     position: fixed;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     z-index: 1;
     top: 0;
     left: 0;
@@ -94,19 +92,19 @@ body {
     padding-right: 72px;
     background: #f9f9f9;
     color: #19191c;
-  }
-  
-  .navbar > button {
-    font-size: 28px;
-  }
-  
-  .navbar-logo {
+}
+
+.navbar > button {
+    font-size: 18px;
+}
+
+.navbar-logo {
     font-size: 25px;
     color: azure;
     text-decoration: none;
-  }
-  
-  .navbar-burger {
+}
+
+.navbar-burger {
     z-index: 3;
     top: 0;
     right: 0;
@@ -117,14 +115,13 @@ body {
     background-image: url("./assets/menu.svg");
     background-repeat: no-repeat;
     background-position: center;
-  }
-  
-  
-  body.open .navbar-burger {
+}
+
+body.open .navbar-burger {
     background-image: url("./assets/close.svg");
-  }
-  
-  .navbar-search {
+}
+
+.navbar-search {
     border: 0;
     height: 40px;
     background: #2f3339 url("./assets/search.svg");
@@ -136,13 +133,13 @@ body {
     width: 180px;
     font-size: 16px;
     font-family: "Euclid Circular A";
-  }
-  
-  .navbar-search::placeholder {
+}
+
+.navbar-search::placeholder {
     color: #a7a7a7;
-  }
-  
-  .menu {
+}
+
+.menu {
     z-index: 2;
     top: 0;
     left: 0;
@@ -157,34 +154,66 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
-  }
-  
-  body.open .menu {
+}
+
+body.open .menu {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .menu > a {
+}
+
+.menu > a {
     color: #f9f9f9;
     font-size: 32px;
     text-decoration: none;
-  }
-  
-  body.open .menu > a {
+}
+
+body.open .menu > a {
     animation: appear 0.3s both;
-  }
-  
-  @keyframes appear {
+}
+
+@keyframes appear {
     0% {
-      opacity: 0;
-      translate: 0 50px;
+        opacity: 0;
+        translate: 0 50px;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
+}
+
 /* ==========MENGHIAS BAGIAN TAJUK DIAKHIRI========== */
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+    .tajuk {
+        padding: 0 5%;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .navigasi_bar a {
+        font-size: 16px;
+        margin: 20px;
+    }
+    
+    .navbar {
+        height: 56px;
+        padding-right: 20px;
+    }
+    
+    .navbar-logo {
+        font-size: 20px;
+    }
+    
+    .navbar-search {
+        height: 32px;
+        width: 120px;
+        font-size: 14px;
+    }
+}
+
 
 /* ==========MENGHIAS BAGIAN BERANDA DIMULAI========== */
 .beranda {
@@ -296,7 +325,21 @@ body {
 
 /* ==========MENGHIAS BAGIAN BERANDA DIAKHIRI========== */
 
+/* ==========MENGHIAS BAGIAN sumbergambr DIMULAI========== */
 
+.sumgam {
+    margin-top: -10px;
+    text-align: center;
+    font-size: 10px;
+    color: var(--warna2);
+}
+
+.sumgamper {
+    margin-top: -5px;
+    text-align: left;
+    font-size: 10px;
+    color: var(--warna2);
+}
 
 /* ==========MENGHIAS BAGIAN TENTANG SAYA DIMULAI========== */
 .tentang_saya {
@@ -459,6 +502,20 @@ body {
 
 
 /* ==========PERKENALALAN biografi========== */
+
+.imagebio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 1cm;
+}
+
+.imagebio-container img {
+    width: 6cm; /* Mengatur lebar gambar */
+    height: 7cm; /* Mengatur tinggi gambar */
+
+}
 
 .container {
     display: grid;
@@ -690,7 +747,6 @@ img:hover {
 
 /* ==========MENGHIAS BAGIAN LAYANAN DIAKHIRI========== */
 
-/* ==========MENGHIAS BAGIAN LAYANAN DIMULAI========== */
 /* ==========MENGHIAS BAGIAN DAMPAK DIMULAI========== */
 .Dampak {
     color: var(--warna1);
@@ -782,35 +838,53 @@ img:hover {
 
 /* ==========MENGHIAS BAGIAN program kerja DIMULAI========== */
 /* Penyesuaian untuk tabel */
-/* Penyesuaian untuk tabel */
 .teks table {
     width: 100%;
-    border-collapse: collapse; /* Menggabungkan batas sel */
-    table-layout: fixed; /* Membuat ukuran tabel menjadi sama */
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.teks th,
+.teks td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: justify;
 }
 
 .teks th {
-    padding: 1px; /* Memberikan padding di dalam sel */
-    border: 1px solid #ddd; /* Menambahkan garis batas pada sel */
-    text-align: center; /* Menjadikan teks di sel tengah secara horizontal */
+    background-color: #f2f2f2; /* Memberi latar belakang abu-abu pada header */
 }
 
-.teks td {
-    padding: 8px; /* Memberikan padding di dalam sel */
-    border: 1px solid #ddd; /* Menambahkan garis batas pada sel */
-    text-align: justify; /* Menjadikan isi sel menjadi rata kiri */
-    vertical-align: top; /* Menjadikan isi sel berada di bagian atas */
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+    .teks th,
+    .teks td {
+        padding: 6px;
+    }
 }
+
+@media only screen and (max-width: 480px) {
+    .teks th,
+    .teks td {
+        padding: 4px;
+        font-size: 12px; /* Mengurangi ukuran font pada tabel untuk layar kecil */
+    }
+}
+/* ==========MENGHIAS BAGIAN program kerja DIAKHIRI========== */
+
 
 /* ==========MENGHIAS BAGIAN PERISTIWA========== */
 
   
   /* Create two equal columns that floats next to each other */
-  .column {
+/* ==========MENGHIAS BAGIAN PERISTIWA========== */
+
+/* Create two equal columns that floats next to each other */
+.column {
     float: left;
-    width: 50%;
+    width: 100%; /* Mengubah lebar menjadi 100% agar satu kolom pada layar kecil */
     padding: 10px;
-    height: 1100px; /* Should be removed. Only for demonstration */
+    height: auto; /* Menghapus tinggi yang ditentukan agar konten bisa menyesuaikan */
   }
   
   /* Clear floats after the columns */
@@ -819,8 +893,100 @@ img:hover {
     display: table;
     clear: both;
   }
+  
+  /* Responsiveness */
+  @media only screen and (min-width: 768px) {
+    .column {
+      width: 50%; /* Mengembalikan lebar kolom menjadi 50% ketika layar lebih besar dari 768px */
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .column {
+      width: 50%; /* Mengembalikan lebar kolom menjadi 50% ketika layar lebih besar dari 1024px */
+    }
+  }
+  
+  /* ==========MENGHIAS BAGIAN PERISTIWA DIKHIRI========== */
+  
+  #pesan-container {
+    max-width: 600px; /* Membatasi lebar kotak pesan */
+    max-height: 300px; /* Menentukan tinggi maksimum kotak pesan */
+    overflow-y: auto; /* Agar kotak pesan dapat di-scroll secara vertikal jika konten melebihi tinggi maksimum */
+    border: 1px solid #ccc; /* Menambahkan garis batas untuk menunjukkan area scroll */
+    padding: 10px; /* Memberikan padding agar konten tidak terlalu dekat dengan batas kotak */
+    margin: 100px auto; /* Mengatur margin atas dan bawah 100px, dan auto untuk memusatkan horizontal */
+
+    
+}
+
+#pesan-container h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+#form-pesan, #pesan-container {
+    margin: 20px;
+}
+
+#pesan-container .pesan {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(213, 208, 208, 0.1);
+}
+
+#pesan-container .pesan p {
+    margin: 0;
+}
+
+#form-pesan input[type="text"],
+#form-pesan textarea {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
 
+#form-pesan input[type="submit"] {
+    width: 100%;
+    background-color: rgb(154, 174, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    /* CSS untuk tombol kirim pesan */
+    #form-komentar input[type="submit"] {
+        /* Aturan-aturan lain */
+        transition: background-color 0.3s; /* Efek transisi ketika tombol di-hover */
+    }
+
+    /* CSS untuk tombol kirim pesan saat diklik */
+    #form-komentar input[type="submit"]:active {
+        background-color: #004080; /* Ubah warna latar belakang saat tombol diklik */
+    }
+
+    .pesan button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pesan button:hover {
+    background-color: #0056b3;
+}
 /* ==========MENGHIAS BAGIAN KONTAK DIMULAI========== */
 .kontak {
     padding-top: 70px;
@@ -833,7 +999,7 @@ img:hover {
 }
 
 .teks_kontak h2 {
-    font-size: 90px;
+    font-size: 40px;
     line-height: 1;
     align-items: center;
 }
