@@ -1,0 +1,1075 @@
+/* ==========FONT GOOGLE========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --latar_belakang: #0f0e17;
+    --warna1: #fffffe;
+    --warna2: #a7a9be;
+    --warna3: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--warna1);
+    background: var(--latar_belakang);
+    overflow-x: hidden;
+}
+
+/* ==========MENGHIAS BAGIAN TAJUK DIMULAI========== */
+.tajuk {
+    background: var(--latar_belakang);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    line-height: 0;
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--warna1);
+    cursor: default;
+    opacity: 0;
+    animation: geserKanan 1s ease forwards;
+}
+
+.navigasi_bar a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    transition: .3s;
+    margin: 30px;
+    font-weight: 500;
+    color: var(--warna1);
+    opacity: 0;
+    animation: geserAtas .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navigasi_bar a:hover {
+    color: var(--warna2);
+}
+
+
+  
+  button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .navbar,
+  .navbar-burger,
+  .menu {
+    position: fixed;
+  }
+  
+  .navbar {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    padding-left: 20px;
+    padding-right: 72px;
+    background: #f9f9f9;
+    color: #19191c;
+  }
+  
+  .navbar > button {
+    font-size: 28px;
+  }
+  
+  .navbar-logo {
+    font-size: 25px;
+    color: azure;
+    text-decoration: none;
+  }
+  
+  .navbar-burger {
+    z-index: 3;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    background-image: url("./assets/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  body.open .navbar-burger {
+    background-image: url("./assets/close.svg");
+  }
+  
+  .navbar-search {
+    border: 0;
+    height: 40px;
+    background: #2f3339 url("./assets/search.svg");
+    background-repeat: no-repeat;
+    background-position: 10px 50%;
+    border: 0;
+    border-radius: 6px;
+    padding-left: 36px;
+    width: 180px;
+    font-size: 16px;
+    font-family: "Euclid Circular A";
+  }
+  
+  .navbar-search::placeholder {
+    color: #a7a7a7;
+  }
+  
+  .menu {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  
+  body.open .menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menu > a {
+    color: #f9f9f9;
+    font-size: 32px;
+    text-decoration: none;
+  }
+  
+  body.open .menu > a {
+    animation: appear 0.3s both;
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      translate: 0 50px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+/* ==========MENGHIAS BAGIAN TAJUK DIAKHIRI========== */
+
+/* ==========MENGHIAS BAGIAN BERANDA DIMULAI========== */
+.beranda {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.konten_beranda {
+    max-width: 600px;
+    position: relative;
+}
+
+.konten_beranda img {
+    width: 500px;
+    position: absolute;
+    top: -70px;
+    left: 580px;
+    opacity: 0;
+    animation: geserKiri 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.konten_beranda h3 {
+    font-size: 35px;
+    font-weight: 700;
+    opacity: 0;
+    animation: geserBawah 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.konten_beranda h3 span {
+    color: var(--warna2);
+    font-weight: 700;
+}
+
+.konten_beranda h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: geserAtas 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.konten_beranda h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: geserKanan 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.konten_beranda p {
+    font-size: 20px;
+    color: var(--warna2);
+    opacity: 0;
+    animation: geserKiri 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.beranda_sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid var(--warna1);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--warna1);
+    text-decoration: none;
+    margin: 30px 10px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: geserKiri 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.beranda_sci a:hover {
+    background: var(--warna1);
+    color: var(--warna3);
+    box-shadow: 0 0 20px var(--warna2);
+}
+
+.tombol1 {
+    display: inline-block;
+    background: var(--warna1);
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 45px;
+    font-size: 18px;
+    color: var(--warna3);
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0;
+    animation: geserAtas 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px var(--warna1) 0 0 25px var(--warna1);
+    margin-top: 1cm 0;
+}
+
+.tombol1:hover {
+    box-shadow: 0 0 5px var(--warna1),
+        0 0 25px var(--warna1), 0 0 50px var(--warna1), 0 0 100px var(--warna1);
+}
+
+/* ==========MENGHIAS BAGIAN BERANDA DIAKHIRI========== */
+
+
+
+/* ==========MENGHIAS BAGIAN TENTANG SAYA DIMULAI========== */
+.tentang_saya {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.teks h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.teks h2 span {
+    color: var(--warna2);
+}
+
+.teks h4 {
+    text-align: center;
+    color: var(--warna1);
+    font-size: 40px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.teks p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--warna2);
+    line-height: 1.7;
+    padding: 1cm;
+}
+
+/* ==========MENGHIAS BAGIAN TENTANG SAYA DIAKHIRI========== */
+
+/* ==========PERKENALALAN ANGGOTA KELOMPOK========== */
+
+.flip-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dua gambar per baris */
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 1cm;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* ==========PERKENALALAN ANGGOTA KELOMPOK DIAKHIRI========== */
+
+/* ==========PERKENALALAN MATERI MULAI========== */
+.paragraf {
+    margin: -120px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.teks .judul {
+    margin: -50px 0;
+        font-size: 20px;
+        color: rgb(154, 174, 255);
+        margin-bottom: 0;
+    }
+
+.teks .materi {
+    margin: -20px 0;
+        text-align: justify;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--warna2);
+        line-height: 1.5;
+        padding: 1cm;
+    }
+
+
+/* ==========PERKENALALAN latar belakang========== */ 
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 1cm;
+}
+
+.image-container img {
+    width: 11cm; /* Mengatur lebar gambar */
+    height: 6cm; /* Mengatur tinggi gambar */
+}
+
+/* ==========PERKENALALAN penyerahan========== */ 
+.imageserah-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 1cm;
+}
+
+.imageserah-container img {
+    width: 9cm; /* Mengatur lebar gambar */
+    height: 6cm; /* Mengatur tinggi gambar */
+}
+
+/* ==========PERKENALALAN proker========== */ 
+.imageproker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 1cm;
+}
+
+.imageproker-container img {
+    width: 10cm; /* Mengatur lebar gambar */
+    height: 7cm; /* Mengatur tinggi gambar */
+
+}
+
+
+/* ==========PERKENALALAN biografi========== */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Satu kolom */
+    grid-template-rows: auto auto; /* Baris otomatis sesuai konten */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; /* Gambar akan berada di bagian bawah kotak */
+}
+
+.image-figure {
+    width: 400px;
+    height: auto;
+    margin: 0 10px; /* Jarak antar gambar */
+}
+
+.judul {
+    text-align: center; /* Menengahkan judul */
+}
+
+.biography h4 {
+    margin-bottom: 0;
+}
+
+.biography p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.image-figure {
+    width: 400px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan proporsi */
+    margin-bottom: 90px; /* Jarak antara gambar */
+}
+
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ==========MENGHIAS BAGIAN PROJEK DIMULAI========== */
+.teks_utama {
+    margin-bottom: 30px;
+}
+
+.teks_utama h1 {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+.teks_utama h1 span {
+    color: var(--warna2);
+}
+
+.konten_projek {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.baris {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.baris img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform .5s;
+}
+
+.lapisan {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #fffffe);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height .5s;
+}
+
+.lapisan h5 {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.lapisan p {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.lapisan a {
+    text-decoration: none;
+}
+
+.lapisan i {
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    background: var(--warna2);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.baris:hover img {
+    transform: scale(1.1);
+}
+
+.baris:hover .lapisan {
+    height: 100%;
+}
+
+/* ==========MENGHIAS BAGIAN PROJEK DIAKHIRI========== */
+
+/* ==========MENGHIAS BAGIAN LAYANAN DIMULAI========== */
+.layanan {
+    color: var(--warna1);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.sub_judul {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub_judul span {
+    color: var(--warna2);
+}
+
+.wadah {
+    padding: 90px;
+}
+
+.daftar_layanan {
+    display: flex;
+    flex-direction: column; /* Mengatur agar daftar layanan tersusun ke bawah */
+    align-items: center; /* Menengahkan daftar layanan secara horizontal */
+    gap: 20px; /* Memberikan jarak antara setiap elemen */
+}
+
+.daftar_layanan div {
+    background-color: transparent;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-radius: 20px;
+    border-right: 10px;
+    transition: background .5s, transform .5s;
+    box-shadow: 1px 1px 20px var(--warna1), 1px 1px 30px var(--warna2);
+}
+
+.daftar_layanan div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.daftar_layanan div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.daftar_layanan div a {
+    text-decoration: none;
+    color: var(--warna2);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.baca {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--warna1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: geserAtas 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px var(--warna1), 0 0 25px var(--warna1);
+}
+
+.baca:hover {
+    color: #0f0e17;
+    box-shadow: 0 0 5px var(--warna1),
+        0 0 25px var(--warna1), 0 0 50px var(--warna1), 0 0 100px var(--warna1);
+}
+
+.daftar_layanan div:hover {
+    transform: translateY(-10px);
+}
+
+/* ==========MENGHIAS BAGIAN LAYANAN DIAKHIRI========== */
+
+/* ==========MENGHIAS BAGIAN LAYANAN DIMULAI========== */
+/* ==========MENGHIAS BAGIAN DAMPAK DIMULAI========== */
+.Dampak {
+    color: var(--warna1);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.sub_judul {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub_judul span {
+    color: var(--warna2);
+}
+
+.teks {
+    padding: 90px;
+}
+
+.daftar_dampak {
+    display: grid; /* Mengatur agar daftar dampak menggunakan grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Mengatur 2 kolom */
+    gap: 20px; /* Memberikan jarak antara setiap elemen */
+}
+
+.daftar_dampak div {
+    background-color: transparent;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-radius: 20px;
+    border-right: 10px;
+    transition: background .5s, transform .5s;
+    box-shadow: 1px 1px 20px var(--warna1), 1px 1px 30px var(--warna2);
+    text-align: center; /* Mengatur agar teks berada di tengah gambar */
+}
+
+.daftar_dampak div i {
+    font-size: 50px;
+    margin-bottom: 10px; /* Memberikan sedikit jarak antara gambar dan teks */
+}
+
+.daftar_dampak div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.daftar_dampak div p {
+    text-align: justify;
+}
+
+.daftar_dampak div a {
+    text-decoration: none;
+    color: var(--warna2);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.baca {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--warna1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: geserAtas 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px var(--warna1), 0 0 25px var(--warna1);
+}
+
+.baca:hover {
+    color: #0f0e17;
+    box-shadow: 0 0 5px var(--warna1),
+        0 0 25px var(--warna1), 0 0 50px var(--warna1), 0 0 100px var(--warna1);
+}
+
+.daftar_dampak div:hover {
+    transform: translateY(-10px);
+}
+
+/* ==========MENGHIAS BAGIAN program kerja DIMULAI========== */
+/* Penyesuaian untuk tabel */
+/* Penyesuaian untuk tabel */
+.teks table {
+    width: 100%;
+    border-collapse: collapse; /* Menggabungkan batas sel */
+    table-layout: fixed; /* Membuat ukuran tabel menjadi sama */
+}
+
+.teks th {
+    padding: 1px; /* Memberikan padding di dalam sel */
+    border: 1px solid #ddd; /* Menambahkan garis batas pada sel */
+    text-align: center; /* Menjadikan teks di sel tengah secara horizontal */
+}
+
+.teks td {
+    padding: 8px; /* Memberikan padding di dalam sel */
+    border: 1px solid #ddd; /* Menambahkan garis batas pada sel */
+    text-align: justify; /* Menjadikan isi sel menjadi rata kiri */
+    vertical-align: top; /* Menjadikan isi sel berada di bagian atas */
+}
+
+/* ==========MENGHIAS BAGIAN PERISTIWA========== */
+
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 1100px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+/* ==========MENGHIAS BAGIAN KONTAK DIMULAI========== */
+.kontak {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: -90px;
+}
+
+.teks_kontak h2 {
+    font-size: 90px;
+    line-height: 1;
+    align-items: center;
+}
+
+.teks_kontak h2 span {
+    color: var(--warna2);
+}
+
+.teks_kontak h4 {
+    margin: 15px 0;
+    color: var(--warna1);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.teks_kontak p {
+    color: var(--warna2);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.daftar_kontak {
+    margin-bottom: 3rem;
+}
+
+.daftar_kontak li {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.daftar_kontak i {
+    display: inline-block;
+    color: var(--warna2);
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.daftar_kontak li a:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: var(--warna2);
+}
+
+.ikon_kontak i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--warna2);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--warna2);
+    text-decoration: none;
+    margin: 30px 15px 10px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: geserKiri 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.ikon_kontak i:hover {
+    background: var(--warna1);
+    color: var(--warna3);
+    box-shadow: 0 0 20px var(--warna2);
+}
+
+.daftar_kontak i:hover {
+    background: var(--warna2);
+    color: var(--warna1);
+    box-shadow: 0 0 20px var(--warna2);
+}
+
+.formulir_kontak form {
+    position: relative;
+}
+
+.formulir_kontak form input,
+form textarea {
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 10px;
+    background: var(--warna3);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+}
+
+.formulir_kontak textarea {
+    resize: none;
+    height: 220px;
+}
+
+.formulir_kontak form .kirim {
+    display: inline-block;
+    padding: 14px 60px;
+    background: var(--warna1);
+    border-radius: 40px;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: geserAtas 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px var(--warna1), 0 0 25px var(--warna1);
+}
+
+.formulir_kontak form .kirim:hover {
+    box-shadow: 0 0 5px var(--warna1),
+        0 0 25px var(--warna1), 0 0 50px var(--warna1), 0 0 100px var(--warna1);
+}
+
+/* ==========MENGHIAS BAGIAN KONTAK DIAKHIRI========== */
+
+/* ==========MENGHIAS BAGIAN HAKCIPTA========== */
+.hak_cipta {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: var(--latar_belakang);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.atas {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.atas i {
+    color: var(--warna1);
+    background-color: var(--latar_belakang);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: .5rem;
+}
+
+/* ==========MENGHIAS BAGIAN HAKCIPTA========== */
+
+/* ==========KUMPULAN ANIMASI DIMULAI========== */
+@keyframes geserKanan {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes geserKiri {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes geserAtas {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes geserBawah {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animasi {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes teksMuncul {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes barGerak {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+@keyframes animasiRadial1 {
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
+
+@keyframes animasiRadial2 {
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
+
+@keyframes animasiRadial3 {
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
+
+@keyframes animasiRadial4 {
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
+
+/* ==========KUMPULAN ANIMASI DIAKHIRI========== */
